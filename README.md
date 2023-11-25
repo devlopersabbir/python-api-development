@@ -23,3 +23,8 @@ lot's of thing which will empact in future.
 
 - [YouTueb Video](https://youtu.be/cZesBpXBaiE)
 - [Source Code](./restfull_api_explain/README.md)
+
+#### [#03](https://youtu.be/cZesBpXBaiE) Python install & ENV setup
+
+- [YouTueb Video](https://youtu.be/cZesBpXBaiE)
+- [Source Code](./restfull_api_explain/README.md)
