@@ -28,3 +28,20 @@ lot's of thing which will empact in future.
 
 - [YouTueb Video](https://youtu.be/wFAmZrWFxbM)
 - [Source Code](./environment/README.md)
+
+#### [Course](https://youtu.be/nJWj__da4aM) Python Crash Course with Python Typing
+
+- [YouTube Video](https://youtu.be/nJWj__da4aM)
+- [Source Code](./crash_course/README.md)
+- 🧑🏻‍💻 Complated Topic
+  - 🎉 Hello World Program in Python
+  - ✨ Python Syntex
+  - 🐸 Comments In Python
+  - 🌟 Variable In Python
+  - 🌼 Python all Data Type
+  - 👑 Python Condition **(`if elif else`)** Everything
+  - 🔥 While Loop In Python
+  - 🐢 For Loop In Python **(Including List, Dict etc)**
+  - 🏆 Function In Python
+  - 💻 Class In Python
+  - 🔫 Python Inheritance **(With Type)**

@@ -1,0 +1,200 @@
+[
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "crash_course.class",
+        "description": "crash_course.class",
+        "peekOfCode": "class Animal:\n    name = \"dog\"\n    color = \"black\"\nobj1 = Animal()\nclass Person:\n    def __init__(self, name: str, age: int) -> None:\n        self.name = name\n        self.age = age\n    def about(self) -> str:\n        return f\"Name is: {self.name} and age is: {self.age}\"",
+        "detail": "crash_course.class",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "kind": 6,
+        "importPath": "crash_course.class",
+        "description": "crash_course.class",
+        "peekOfCode": "class Person:\n    def __init__(self, name: str, age: int) -> None:\n        self.name = name\n        self.age = age\n    def about(self) -> str:\n        return f\"Name is: {self.name} and age is: {self.age}\"\nobj = Person(\"Sabbir\", 19)\nprint(obj.about())",
+        "detail": "crash_course.class",
+        "documentation": {}
+    },
+    {
+        "label": "obj1",
+        "kind": 5,
+        "importPath": "crash_course.class",
+        "description": "crash_course.class",
+        "peekOfCode": "obj1 = Animal()\nclass Person:\n    def __init__(self, name: str, age: int) -> None:\n        self.name = name\n        self.age = age\n    def about(self) -> str:\n        return f\"Name is: {self.name} and age is: {self.age}\"\nobj = Person(\"Sabbir\", 19)\nprint(obj.about())",
+        "detail": "crash_course.class",
+        "documentation": {}
+    },
+    {
+        "label": "obj",
+        "kind": 5,
+        "importPath": "crash_course.class",
+        "description": "crash_course.class",
+        "peekOfCode": "obj = Person(\"Sabbir\", 19)\nprint(obj.about())",
+        "detail": "crash_course.class",
+        "documentation": {}
+    },
+    {
+        "label": "fruits",
+        "kind": 5,
+        "importPath": "crash_course.for_loop",
+        "description": "crash_course.for_loop",
+        "peekOfCode": "fruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    print(fruit)",
+        "detail": "crash_course.for_loop",
+        "documentation": {}
+    },
+    {
+        "label": "get_name",
+        "kind": 2,
+        "importPath": "crash_course.funtion",
+        "description": "crash_course.funtion",
+        "peekOfCode": "def get_name(name, age):\n    print(f\"Hello {name.title()}, age is {age}\")\n    # return f\"Hello {name.title()}\"\nget_name(\"sabbir\", 19)",
+        "detail": "crash_course.funtion",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "crash_course.if_conditions",
+        "description": "crash_course.if_conditions",
+        "peekOfCode": "a = 200\nb = 33\nc = 500\nif a > b or c > a:\n    print(\"Both conditions are True\")",
+        "detail": "crash_course.if_conditions",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "crash_course.if_conditions",
+        "description": "crash_course.if_conditions",
+        "peekOfCode": "b = 33\nc = 500\nif a > b or c > a:\n    print(\"Both conditions are True\")",
+        "detail": "crash_course.if_conditions",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "crash_course.if_conditions",
+        "description": "crash_course.if_conditions",
+        "peekOfCode": "c = 500\nif a > b or c > a:\n    print(\"Both conditions are True\")",
+        "detail": "crash_course.if_conditions",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "kind": 6,
+        "importPath": "crash_course.inheritance",
+        "description": "crash_course.inheritance",
+        "peekOfCode": "class Person:\n    def __init__(self, fname: str, lname: str) -> None:\n        self.firstname = fname\n        self.lastname = lname\nclass Student(Person):\n    def printname(self) -> None:\n        print(self.firstname, self.lastname)\nsabbir = Student(\"Sabbir\", \"Hossain\")\nsabbir.printname()\nrafi = Student(\"Raiful\", \"Islam\")",
+        "detail": "crash_course.inheritance",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "kind": 6,
+        "importPath": "crash_course.inheritance",
+        "description": "crash_course.inheritance",
+        "peekOfCode": "class Student(Person):\n    def printname(self) -> None:\n        print(self.firstname, self.lastname)\nsabbir = Student(\"Sabbir\", \"Hossain\")\nsabbir.printname()\nrafi = Student(\"Raiful\", \"Islam\")\nrafi.printname()",
+        "detail": "crash_course.inheritance",
+        "documentation": {}
+    },
+    {
+        "label": "sabbir",
+        "kind": 5,
+        "importPath": "crash_course.inheritance",
+        "description": "crash_course.inheritance",
+        "peekOfCode": "sabbir = Student(\"Sabbir\", \"Hossain\")\nsabbir.printname()\nrafi = Student(\"Raiful\", \"Islam\")\nrafi.printname()",
+        "detail": "crash_course.inheritance",
+        "documentation": {}
+    },
+    {
+        "label": "rafi",
+        "kind": 5,
+        "importPath": "crash_course.inheritance",
+        "description": "crash_course.inheritance",
+        "peekOfCode": "rafi = Student(\"Raiful\", \"Islam\")\nrafi.printname()",
+        "detail": "crash_course.inheritance",
+        "documentation": {}
+    },
+    {
+        "label": "adult",
+        "kind": 2,
+        "importPath": "crash_course.try_except",
+        "description": "crash_course.try_except",
+        "peekOfCode": "def adult(something):\n    try:\n        print(\"Age is \" + something)\n    except:\n        print(\"Fail to concat\")\n    finally:\n        print(\"Evething is fine.\")\nadult(20)",
+        "detail": "crash_course.try_except",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "crash_course.varibale_datatype",
+        "description": "crash_course.varibale_datatype",
+        "peekOfCode": "name = \"Sabbir\"  # string\nfndName = 'Rafi'  # string str\nprint(type(name))  # output: str\nprint(fndName)\n\"\"\"\nNumber Data Type\n\"\"\"\nage = 20\nprint(age)\n\"\"\"",
+        "detail": "crash_course.varibale_datatype",
+        "documentation": {}
+    },
+    {
+        "label": "fndName",
+        "kind": 5,
+        "importPath": "crash_course.varibale_datatype",
+        "description": "crash_course.varibale_datatype",
+        "peekOfCode": "fndName = 'Rafi'  # string str\nprint(type(name))  # output: str\nprint(fndName)\n\"\"\"\nNumber Data Type\n\"\"\"\nage = 20\nprint(age)\n\"\"\"\nlist Data Type",
+        "detail": "crash_course.varibale_datatype",
+        "documentation": {}
+    },
+    {
+        "label": "age",
+        "kind": 5,
+        "importPath": "crash_course.varibale_datatype",
+        "description": "crash_course.varibale_datatype",
+        "peekOfCode": "age = 20\nprint(age)\n\"\"\"\nlist Data Type\n\"\"\"\nrolls = [20, 30, 40, 50]  # list\nprint(rolls)\n\"\"\"\ndict Data Type\n\"\"\"",
+        "detail": "crash_course.varibale_datatype",
+        "documentation": {}
+    },
+    {
+        "label": "rolls",
+        "kind": 5,
+        "importPath": "crash_course.varibale_datatype",
+        "description": "crash_course.varibale_datatype",
+        "peekOfCode": "rolls = [20, 30, 40, 50]  # list\nprint(rolls)\n\"\"\"\ndict Data Type\n\"\"\"\nfnds = {\"Tahsin\", \"Rafi\", \"Tanvir\", \"Ankon\"}\nprint(fnds)\n\"\"\"\nBool Data Type\n\"\"\"",
+        "detail": "crash_course.varibale_datatype",
+        "documentation": {}
+    },
+    {
+        "label": "fnds",
+        "kind": 5,
+        "importPath": "crash_course.varibale_datatype",
+        "description": "crash_course.varibale_datatype",
+        "peekOfCode": "fnds = {\"Tahsin\", \"Rafi\", \"Tanvir\", \"Ankon\"}\nprint(fnds)\n\"\"\"\nBool Data Type\n\"\"\"\nisOpen = False | True\nprint(isOpen)",
+        "detail": "crash_course.varibale_datatype",
+        "documentation": {}
+    },
+    {
+        "label": "isOpen",
+        "kind": 5,
+        "importPath": "crash_course.varibale_datatype",
+        "description": "crash_course.varibale_datatype",
+        "peekOfCode": "isOpen = False | True\nprint(isOpen)",
+        "detail": "crash_course.varibale_datatype",
+        "documentation": {}
+    },
+    {
+        "label": "starting_point",
+        "kind": 5,
+        "importPath": "crash_course.while",
+        "description": "crash_course.while",
+        "peekOfCode": "starting_point = 1\nwhile starting_point < 10:\n    print(starting_point)\n    starting_point += 1\n    # starting_point = starting_point + 1\nindex = 1\nwhile True:\n    print(index)\n    index += 1\n    if index == 10:",
+        "detail": "crash_course.while",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 5,
+        "importPath": "crash_course.while",
+        "description": "crash_course.while",
+        "peekOfCode": "index = 1\nwhile True:\n    print(index)\n    index += 1\n    if index == 10:\n        break",
+        "detail": "crash_course.while",
+        "documentation": {}
+    }
+]
