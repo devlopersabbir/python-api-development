@@ -45,3 +45,13 @@ lot's of thing which will empact in future.
   - 🏆 Function In Python
   - 💻 Class In Python
   - 🔫 Python Inheritance **(With Type)**
+
+#### [#05](https://youtu.be/K2ne3fwFl5E) Python Virtual Environment Setup
+
+- [YouTube Video](https://youtu.be/K2ne3fwFl5E)
+- [Source Code](./environment/README.md)
+
+#### [#06](https://youtu.be/ElSed0SdJaQ) Synchronous VS Asynchronous
+
+- [YouTube Video](https://youtu.be/ElSed0SdJaQ)
+- [Source Code](./sync_vs_async/README.md)
