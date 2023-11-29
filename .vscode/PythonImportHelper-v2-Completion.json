@@ -1,5 +1,13 @@
 [
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Animal",
         "kind": 6,
         "importPath": "crash_course.class",
@@ -195,6 +203,15 @@
         "description": "crash_course.while",
         "peekOfCode": "index = 1\nwhile True:\n    print(index)\n    index += 1\n    if index == 10:\n        break",
         "detail": "crash_course.while",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "fastapi_hello.main",
+        "description": "fastapi_hello.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def root():\n    return {\n        \"message\": \"Hello world\"\n    }\n# http://localhost:5000/user\n@app.get(\"/user\")\nasync def user():\n    return {",
+        "detail": "fastapi_hello.main",
         "documentation": {}
     }
 ]
