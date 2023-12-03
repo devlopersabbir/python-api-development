@@ -60,3 +60,8 @@ lot's of thing which will empact in future.
 
 - [YouTube Video](https://youtu.be/yFo3b1FIAYM)
 - [Source Code](./uvicorn_web_server/README.md)
+
+#### [#08](https://youtu.be/Cbfl8B1XpXY) FastAPI Hello World Program and HTTP GET Method
+
+- [YouTube Video](https://youtu.be/Cbfl8B1XpXY)
+- [Source Code](./fastapi_hello/README.md)
