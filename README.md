@@ -55,3 +55,8 @@ lot's of thing which will empact in future.
 
 - [YouTube Video](https://youtu.be/ElSed0SdJaQ)
 - [Source Code](./sync_vs_async/README.md)
+
+#### [#07](https://youtu.be/yFo3b1FIAYM) Uviron Web Server Explanation
+
+- [YouTube Video](https://youtu.be/yFo3b1FIAYM)
+- [Source Code](./uvicorn_web_server/README.md)
