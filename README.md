@@ -65,3 +65,8 @@ lot's of thing which will empact in future.
 
 - [YouTube Video](https://youtu.be/Cbfl8B1XpXY)
 - [Source Code](./fastapi_hello/README.md)
+
+#### [#09](https://youtu.be/NErlaiYUR60) Path Parameter/Params
+
+- [YouTube Video](https://youtu.be/NErlaiYUR60)
+- [Source Code](#)
