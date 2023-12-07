@@ -8,6 +8,38 @@
         "documentation": {}
     },
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
         "label": "Animal",
         "kind": 6,
         "importPath": "crash_course.class",
@@ -212,6 +244,24 @@
         "description": "fastapi_hello.main",
         "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def root():\n    return {\n        \"message\": \"Hello world\"\n    }\n# http://localhost:5000/user\n@app.get(\"/user\")\nasync def user():\n    return {",
         "detail": "fastapi_hello.main",
+        "documentation": {}
+    },
+    {
+        "label": "Role",
+        "kind": 6,
+        "importPath": "path_params.main",
+        "description": "path_params.main",
+        "peekOfCode": "class Role(str, Enum):\n    ADMIN = \"ADMIN\"\n    USER = \"USER\"\n@app.get(\"/user/{role}\")\nasync def user(role:Role):\n    if role is role.ADMIN:\n        return JSONResponse(status_code=200, content={\n            \"message\":\"You are a admin\"\n        })\n    else:",
+        "detail": "path_params.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "path_params.main",
+        "description": "path_params.main",
+        "peekOfCode": "app = FastAPI()\nclass Role(str, Enum):\n    ADMIN = \"ADMIN\"\n    USER = \"USER\"\n@app.get(\"/user/{role}\")\nasync def user(role:Role):\n    if role is role.ADMIN:\n        return JSONResponse(status_code=200, content={\n            \"message\":\"You are a admin\"\n        })",
+        "detail": "path_params.main",
         "documentation": {}
     }
 ]
