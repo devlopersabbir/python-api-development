@@ -24,6 +24,30 @@
         "documentation": {}
     },
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Enum",
         "importPath": "enum",
         "description": "enum",
@@ -37,6 +61,14 @@
         "description": "fastapi.responses",
         "isExtraImport": true,
         "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -262,6 +294,24 @@
         "description": "path_params.main",
         "peekOfCode": "app = FastAPI()\nclass Role(str, Enum):\n    ADMIN = \"ADMIN\"\n    USER = \"USER\"\n@app.get(\"/user/{role}\")\nasync def user(role:Role):\n    if role is role.ADMIN:\n        return JSONResponse(status_code=200, content={\n            \"message\":\"You are a admin\"\n        })",
         "detail": "path_params.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "query_params.main",
+        "description": "query_params.main",
+        "peekOfCode": "app = FastAPI()\nfake_items_db:list[dict[str, str]]= [{\"item_name\": \"1\"}, {\"item_name\": \"2\"}, {\"item_name\": \"3\"}]\n@app.get(\"/\")\nasync def index(skip:int = 0, limit:int = 10):\n    item = fake_items_db[skip:skip + limit]\n    return [item]",
+        "detail": "query_params.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "query_validations.main",
+        "description": "query_validations.main",
+        "peekOfCode": "app = FastAPI()\nfake_data: dict[str, list[dict[int, str]]] = {\n    \"items\": [\n        {1: \"Apple\"},\n        {2: \"Banana\"}\n    ]\n}\n# @app.get(\"/items\", tags=[\"Items\"])\n# async def get_item(q: str | None = None):\n#     print(q)",
+        "detail": "query_validations.main",
         "documentation": {}
     }
 ]
