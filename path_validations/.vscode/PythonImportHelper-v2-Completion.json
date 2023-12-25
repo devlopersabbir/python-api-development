@@ -1,0 +1,69 @@
+[
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "getProduct",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/products/{product_id}\", tags=[\"Get single product\"])\ndef getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/users/{id}\", tags=[\"get single user\"])\nasync def getUser(id: Annotated[int, Path(title=\"user id\")]):\n    print(id)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "getProduct",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/users/{id}\", tags=[\"get single user\"])\nasync def getUser(id: Annotated[int, Path(title=\"user id\")]):\n    print(id)\n    result = {\n        \"id\": 1\n    }\n    if id:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/products/{product_id}\", tags=[\"Get single product\"])\ndef getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/products/{product_id}\", tags=[\"Get single product\"])\ndef getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/users/{id}\", tags=[\"get single user\"])",
+        "detail": "main",
+        "documentation": {}
+    }
+]
