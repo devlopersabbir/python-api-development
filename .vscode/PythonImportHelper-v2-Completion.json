@@ -32,6 +32,30 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -61,6 +85,22 @@
         "description": "fastapi.responses",
         "isExtraImport": true,
         "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -294,6 +334,33 @@
         "description": "path_params.main",
         "peekOfCode": "app = FastAPI()\nclass Role(str, Enum):\n    ADMIN = \"ADMIN\"\n    USER = \"USER\"\n@app.get(\"/user/{role}\")\nasync def user(role:Role):\n    if role is role.ADMIN:\n        return JSONResponse(status_code=200, content={\n            \"message\":\"You are a admin\"\n        })",
         "detail": "path_params.main",
+        "documentation": {}
+    },
+    {
+        "label": "getProduct",
+        "kind": 2,
+        "importPath": "path_validations.main",
+        "description": "path_validations.main",
+        "peekOfCode": "def getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/products/{product_id}\", tags=[\"Get single product\"])\ndef getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/users/{id}\", tags=[\"get single user\"])\nasync def getUser(id: Annotated[int, Path(title=\"user id\")]):\n    print(id)",
+        "detail": "path_validations.main",
+        "documentation": {}
+    },
+    {
+        "label": "getProduct",
+        "kind": 2,
+        "importPath": "path_validations.main",
+        "description": "path_validations.main",
+        "peekOfCode": "def getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/users/{id}\", tags=[\"get single user\"])\nasync def getUser(id: Annotated[int, Path(title=\"user id\")]):\n    print(id)\n    result = {\n        \"id\": 1\n    }\n    if id:",
+        "detail": "path_validations.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "path_validations.main",
+        "description": "path_validations.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/products/{product_id}\", tags=[\"Get single product\"])\ndef getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/products/{product_id}\", tags=[\"Get single product\"])\ndef getProduct(product_id: int):\n    print(product_id)\n    return {\"hello\"}\n@app.get(\"/users/{id}\", tags=[\"get single user\"])",
+        "detail": "path_validations.main",
         "documentation": {}
     },
     {

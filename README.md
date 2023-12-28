@@ -2,7 +2,7 @@
 
 Learn REST | RESTful API development with python
 [FastAPI](https://fastapi.tiangolo.com/) from
-[ST Sabbir](https://youtube.com/c/stsabbir) **Sabbir Hossain Shuvo**
+[ST Sabbir](https://youtube.com/@stsabbir) **Sabbir Hossain Shuvo**
 
 In this course I covered evething about what is API and how API works and how we
 can create our own RESTful API small to high scaleable.
@@ -70,3 +70,23 @@ lot's of thing which will empact in future.
 
 - [YouTube Video](https://youtu.be/NErlaiYUR60)
 - [Source Code](./path_params)
+
+#### [#10](https://youtu.be/AcZQwiu4_ko) Query Parameter/Params
+
+- [YouTube Video](https://youtu.be/AcZQwiu4_ko)
+- [Source Code](./query_params)
+
+#### [#11](https://youtu.be/JIssK2UWgkI) Pydantic HTTP Req, Res validation
+
+- [YouTube Video](https://youtu.be/JIssK2UWgkI)
+- [Source Code](#)
+
+#### [#12](https://youtu.be/Ba_o-Kx3Lpw) Query Parameter Validations
+
+- [YouTube Video](https://youtu.be/Ba_o-Kx3Lpw)
+- [Source Code](./query_validations)
+
+#### [#13](https://youtu.be/dWKrarS4-IU) Path Parameter Validations
+
+- [YouTube Video](https://youtu.be/dWKrarS4-IU)
+- [Source Code](./path_validations)
