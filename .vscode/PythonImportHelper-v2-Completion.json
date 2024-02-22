@@ -56,6 +56,14 @@
         "documentation": {}
     },
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "status",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -136,11 +144,11 @@
         "documentation": {}
     },
     {
-        "label": "Annotated",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -165,6 +173,22 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
         "documentation": {}
     },
     {
@@ -200,11 +224,35 @@
         "documentation": {}
     },
     {
+        "label": "jsonable_encoder",
+        "importPath": "fastapi.encoders",
+        "description": "fastapi.encoders",
+        "isExtraImport": true,
+        "detail": "fastapi.encoders",
+        "documentation": {}
+    },
+    {
         "label": "Enum",
         "importPath": "enum",
         "description": "enum",
         "isExtraImport": true,
         "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "importPath": "model.user",
+        "description": "model.user",
+        "isExtraImport": true,
+        "detail": "model.user",
         "documentation": {}
     },
     {
@@ -241,6 +289,42 @@
         "description": "body_multiple_params.main",
         "peekOfCode": "app = FastAPI()\nclass User(BaseModel):\n  name: str | None = None\n  username: str\n  password: str\n  age: int | None = 20\n@app.put(\"/{id}\", tags=[\"update user\"])\nasync def update_user(\n  id: Annotated[int, Path(title=\"user id\", le=100, ge=0)],\n  query: Annotated[str | None, Query(title=\"search query\")] = None,",
         "detail": "body_multiple_params.main",
+        "documentation": {}
+    },
+    {
+        "label": "Relation",
+        "kind": 6,
+        "importPath": "body_nested_model.model.user",
+        "description": "body_nested_model.model.user",
+        "peekOfCode": "class Relation(Enum):\n    FATHER = \"father\"\n    MOTHER = \"mother\"\nclass Parents(BaseModel):\n    full_name: str | None\n    relation: Relation | None = Relation.MOTHER\nclass UserModel(BaseModel):\n    name: str\n    username: str\n    password: str",
+        "detail": "body_nested_model.model.user",
+        "documentation": {}
+    },
+    {
+        "label": "Parents",
+        "kind": 6,
+        "importPath": "body_nested_model.model.user",
+        "description": "body_nested_model.model.user",
+        "peekOfCode": "class Parents(BaseModel):\n    full_name: str | None\n    relation: Relation | None = Relation.MOTHER\nclass UserModel(BaseModel):\n    name: str\n    username: str\n    password: str\n    # skills: set[str] = set()  # it will just give us a unique item\n    reference: Parents",
+        "detail": "body_nested_model.model.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "kind": 6,
+        "importPath": "body_nested_model.model.user",
+        "description": "body_nested_model.model.user",
+        "peekOfCode": "class UserModel(BaseModel):\n    name: str\n    username: str\n    password: str\n    # skills: set[str] = set()  # it will just give us a unique item\n    reference: Parents",
+        "detail": "body_nested_model.model.user",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "body_nested_model.main",
+        "description": "body_nested_model.main",
+        "peekOfCode": "app = FastAPI()\n@app.put(\"/\", tags=[\"update profile\"])\nasync def update_user(request_body: UserModel):\n    encoded = jsonable_encoder(request_body)\n    print(encoded)\n    return JSONResponse(content=encoded, status_code=200)\n@app.get(\"/\", tags=[\"Health\"])\nasync def root_route():\n    return {\"Hello\": \"Hello World\"}",
+        "detail": "body_nested_model.main",
         "documentation": {}
     },
     {
