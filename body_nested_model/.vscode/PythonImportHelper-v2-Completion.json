@@ -1,0 +1,86 @@
+[
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "jsonable_encoder",
+        "importPath": "fastapi.encoders",
+        "description": "fastapi.encoders",
+        "isExtraImport": true,
+        "detail": "fastapi.encoders",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "importPath": "model.user",
+        "description": "model.user",
+        "isExtraImport": true,
+        "detail": "model.user",
+        "documentation": {}
+    },
+    {
+        "label": "Relation",
+        "kind": 6,
+        "importPath": "model.user",
+        "description": "model.user",
+        "peekOfCode": "class Relation(Enum):\n    FATHER = \"father\"\n    MOTHER = \"mother\"\nclass Parents(BaseModel):\n    full_name: str | None\n    relation: Relation | None = Relation.MOTHER\nclass UserModel(BaseModel):\n    name: str\n    username: str\n    password: str",
+        "detail": "model.user",
+        "documentation": {}
+    },
+    {
+        "label": "Parents",
+        "kind": 6,
+        "importPath": "model.user",
+        "description": "model.user",
+        "peekOfCode": "class Parents(BaseModel):\n    full_name: str | None\n    relation: Relation | None = Relation.MOTHER\nclass UserModel(BaseModel):\n    name: str\n    username: str\n    password: str\n    # skills: set[str] = set()  # it will just give us a unique item\n    reference: Parents",
+        "detail": "model.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "kind": 6,
+        "importPath": "model.user",
+        "description": "model.user",
+        "peekOfCode": "class UserModel(BaseModel):\n    name: str\n    username: str\n    password: str\n    # skills: set[str] = set()  # it will just give us a unique item\n    reference: Parents",
+        "detail": "model.user",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n@app.put(\"/\", tags=[\"update profile\"])\nasync def update_user(request_body: UserModel):\n    encoded = jsonable_encoder(request_body)\n    print(encoded)\n    return JSONResponse(content=encoded, status_code=200)\n@app.get(\"/\", tags=[\"Health\"])\nasync def root_route():\n    return {\"Hello\": \"Hello World\"}",
+        "detail": "main",
+        "documentation": {}
+    }
+]

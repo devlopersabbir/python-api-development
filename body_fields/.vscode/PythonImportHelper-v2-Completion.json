@@ -1,0 +1,60 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class User(BaseModel):\n    name: str | None\n    username: str\n    bio: str | None = Field(\n        title=\"User bio description\",\n        max_length=4000\n    )\n    salary: float = Field(\n        ge=1000\n    )",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\nclass User(BaseModel):\n    name: str | None\n    username: str\n    bio: str | None = Field(\n        title=\"User bio description\",\n        max_length=4000\n    )\n    salary: float = Field(\n        ge=1000",
+        "detail": "main",
+        "documentation": {}
+    }
+]
