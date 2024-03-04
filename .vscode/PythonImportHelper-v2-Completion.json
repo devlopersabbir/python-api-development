@@ -120,6 +120,22 @@
         "documentation": {}
     },
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Field",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -149,6 +165,30 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -253,6 +293,30 @@
         "description": "model.user",
         "isExtraImport": true,
         "detail": "model.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel1",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel2",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel3",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
         "documentation": {}
     },
     {
@@ -595,6 +659,78 @@
         "description": "query_validations.main",
         "peekOfCode": "app = FastAPI()\nfake_data: dict[str, list[dict[int, str]]] = {\n    \"items\": [\n        {1: \"Apple\"},\n        {2: \"Banana\"}\n    ]\n}\n# @app.get(\"/items\", tags=[\"Items\"])\n# async def get_item(q: str | None = None):\n#     print(q)",
         "detail": "query_validations.main",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel1",
+        "kind": 6,
+        "importPath": "request_example.models.user",
+        "description": "request_example.models.user",
+        "peekOfCode": "class UserModel1(BaseModel):\n    name: str | None\nclass UserModel2(BaseModel):\n    name: str | None = Field(examples=[\"Sabbir Hossain Shuvo\"])\nclass UserModel3(BaseModel):\n    name: str | None\n    model_config = {\n        \"json_schema_extra\": {\n            \"examples\": [\n                {",
+        "detail": "request_example.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel2",
+        "kind": 6,
+        "importPath": "request_example.models.user",
+        "description": "request_example.models.user",
+        "peekOfCode": "class UserModel2(BaseModel):\n    name: str | None = Field(examples=[\"Sabbir Hossain Shuvo\"])\nclass UserModel3(BaseModel):\n    name: str | None\n    model_config = {\n        \"json_schema_extra\": {\n            \"examples\": [\n                {\n                    \"name\": \"Fucker boy\"\n                }",
+        "detail": "request_example.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel3",
+        "kind": 6,
+        "importPath": "request_example.models.user",
+        "description": "request_example.models.user",
+        "peekOfCode": "class UserModel3(BaseModel):\n    name: str | None\n    model_config = {\n        \"json_schema_extra\": {\n            \"examples\": [\n                {\n                    \"name\": \"Fucker boy\"\n                }\n            ]\n        }",
+        "detail": "request_example.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "root_routes",
+        "kind": 2,
+        "importPath": "request_example.main",
+        "description": "request_example.main",
+        "peekOfCode": "def root_routes():\n    return {\"hello\": \"world\"}\n@app.put(\"/1\", tags=['update user 1'])\ndef update_user(request_body: Annotated[UserModel1, Body(example={\n    \"name\": \"sabbir\"\n})]):\n    print(request_body)\n    pass\n@app.put(\"/2\", tags=['update user 2'])\ndef update_user2(request_body: Annotated[UserModel2, Body()]):",
+        "detail": "request_example.main",
+        "documentation": {}
+    },
+    {
+        "label": "update_user",
+        "kind": 2,
+        "importPath": "request_example.main",
+        "description": "request_example.main",
+        "peekOfCode": "def update_user(request_body: Annotated[UserModel1, Body(example={\n    \"name\": \"sabbir\"\n})]):\n    print(request_body)\n    pass\n@app.put(\"/2\", tags=['update user 2'])\ndef update_user2(request_body: Annotated[UserModel2, Body()]):\n    print(request_body)\n    pass\n@app.put(\"/3\", tags=['update user 3'])",
+        "detail": "request_example.main",
+        "documentation": {}
+    },
+    {
+        "label": "update_user2",
+        "kind": 2,
+        "importPath": "request_example.main",
+        "description": "request_example.main",
+        "peekOfCode": "def update_user2(request_body: Annotated[UserModel2, Body()]):\n    print(request_body)\n    pass\n@app.put(\"/3\", tags=['update user 3'])\ndef update_user3(request_body: Annotated[UserModel3, Body()]):\n    print(request_body)\n    pass",
+        "detail": "request_example.main",
+        "documentation": {}
+    },
+    {
+        "label": "update_user3",
+        "kind": 2,
+        "importPath": "request_example.main",
+        "description": "request_example.main",
+        "peekOfCode": "def update_user3(request_body: Annotated[UserModel3, Body()]):\n    print(request_body)\n    pass",
+        "detail": "request_example.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "request_example.main",
+        "description": "request_example.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\", tags=[\"root route for hello world\"])\ndef root_routes():\n    return {\"hello\": \"world\"}\n@app.put(\"/1\", tags=['update user 1'])\ndef update_user(request_body: Annotated[UserModel1, Body(example={\n    \"name\": \"sabbir\"\n})]):\n    print(request_body)\n    pass",
+        "detail": "request_example.main",
         "documentation": {}
     }
 ]
