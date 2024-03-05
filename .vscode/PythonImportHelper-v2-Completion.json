@@ -56,6 +56,22 @@
         "documentation": {}
     },
     {
+        "label": "Body",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -176,11 +192,27 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "Field",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -293,6 +325,38 @@
         "description": "model.user",
         "isExtraImport": true,
         "detail": "model.user",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -587,6 +651,33 @@
         "description": "crash_course.while",
         "peekOfCode": "index = 1\nwhile True:\n    print(index)\n    index += 1\n    if index == 10:\n        break",
         "detail": "crash_course.while",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 6,
+        "importPath": "extra_data_types.main",
+        "description": "extra_data_types.main",
+        "peekOfCode": "class model(BaseModel):\n    uuid: str = uuid4()\n    start: datetime | None\n    end: datetime | None\n    repeat: time | None\n    proced: timedelta | None\n@app.put(\"/\", tags=[\"routes\"])\ndef routes(requestModel: Annotated[model, Body()]):\n    # print(requestModel)\n    start_process = requestModel.start + requestModel.proced",
+        "detail": "extra_data_types.main",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 2,
+        "importPath": "extra_data_types.main",
+        "description": "extra_data_types.main",
+        "peekOfCode": "def routes(requestModel: Annotated[model, Body()]):\n    # print(requestModel)\n    start_process = requestModel.start + requestModel.proced\n    duration = requestModel.end - start_process\n    print(duration)\n    pass",
+        "detail": "extra_data_types.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "extra_data_types.main",
+        "description": "extra_data_types.main",
+        "peekOfCode": "app = FastAPI()\nclass model(BaseModel):\n    uuid: str = uuid4()\n    start: datetime | None\n    end: datetime | None\n    repeat: time | None\n    proced: timedelta | None\n@app.put(\"/\", tags=[\"routes\"])\ndef routes(requestModel: Annotated[model, Body()]):\n    # print(requestModel)",
+        "detail": "extra_data_types.main",
         "documentation": {}
     },
     {

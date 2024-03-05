@@ -1,0 +1,93 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class model(BaseModel):\n    uuid: str = uuid4()\n    start: datetime | None\n    end: datetime | None\n    repeat: time | None\n    proced: timedelta | None\n@app.put(\"/\", tags=[\"routes\"])\ndef routes(requestModel: Annotated[model, Body()]):\n    # print(requestModel)\n    start_process = requestModel.start + requestModel.proced",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def routes(requestModel: Annotated[model, Body()]):\n    # print(requestModel)\n    start_process = requestModel.start + requestModel.proced\n    duration = requestModel.end - start_process\n    print(duration)\n    pass",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\nclass model(BaseModel):\n    uuid: str = uuid4()\n    start: datetime | None\n    end: datetime | None\n    repeat: time | None\n    proced: timedelta | None\n@app.put(\"/\", tags=[\"routes\"])\ndef routes(requestModel: Annotated[model, Body()]):\n    # print(requestModel)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
