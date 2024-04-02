@@ -1,0 +1,19 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def room_routes():\n    return {\"message\": \"hello world\"}",
+        "detail": "main",
+        "documentation": {}
+    }
+]
