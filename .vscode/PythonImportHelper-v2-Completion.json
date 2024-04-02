@@ -56,6 +56,14 @@
         "documentation": {}
     },
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Body",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -453,6 +461,15 @@
         "description": "body_nested_model.main",
         "peekOfCode": "app = FastAPI()\n@app.put(\"/\", tags=[\"update profile\"])\nasync def update_user(request_body: UserModel):\n    encoded = jsonable_encoder(request_body)\n    print(encoded)\n    return JSONResponse(content=encoded, status_code=200)\n@app.get(\"/\", tags=[\"Health\"])\nasync def root_route():\n    return {\"Hello\": \"Hello World\"}",
         "detail": "body_nested_model.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "cookie_parameters.main",
+        "description": "cookie_parameters.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def room_routes():\n    return {\"message\": \"hello world\"}",
+        "detail": "cookie_parameters.main",
         "documentation": {}
     },
     {
