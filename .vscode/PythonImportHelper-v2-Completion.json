@@ -56,6 +56,22 @@
         "documentation": {}
     },
     {
+        "label": "Cookie",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -213,6 +229,14 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -468,7 +492,7 @@
         "kind": 5,
         "importPath": "cookie_parameters.main",
         "description": "cookie_parameters.main",
-        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def room_routes():\n    return {\"message\": \"hello world\"}",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def room_routes():\n    return {\"message\": \"hello world\"}\n@app.get(\"/token\", tags=[\"token\"])\nasync def write_token():\n    response = Response(content=\"cookie is set successfully\")\n    response.set_cookie(key=\"token\", value=\"fake-cookie-token\", httponly=True, max_age=5,  path=\"/\", secure=False, samesite=\"strict\")\n    return response\n@app.get(\"/items\", tags=[\"items\"])",
         "detail": "cookie_parameters.main",
         "documentation": {}
     },

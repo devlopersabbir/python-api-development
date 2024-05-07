@@ -8,11 +8,35 @@
         "documentation": {}
     },
     {
+        "label": "Cookie",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def room_routes():\n    return {\"message\": \"hello world\"}",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def room_routes():\n    return {\"message\": \"hello world\"}\n@app.get(\"/token\", tags=[\"token\"])\nasync def write_token():\n    response = Response(content=\"cookie is set successfully\")\n    response.set_cookie(key=\"token\", value=\"fake-cookie-token\", httponly=True, max_age=5,  path=\"/\", secure=False, samesite=\"strict\")\n    return response\n@app.get(\"/items\", tags=[\"items\"])",
         "detail": "main",
         "documentation": {}
     }
