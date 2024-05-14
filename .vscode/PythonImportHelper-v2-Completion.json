@@ -104,6 +104,30 @@
         "documentation": {}
     },
     {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "status",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -229,6 +253,14 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -728,6 +760,33 @@
         "description": "fastapi_hello.main",
         "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\nasync def root():\n    return {\n        \"message\": \"Hello world\"\n    }\n# http://localhost:5000/user\n@app.get(\"/user\")\nasync def user():\n    return {",
         "detail": "fastapi_hello.main",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "header_params.main",
+        "description": "header_params.main",
+        "peekOfCode": "def root():\n    return {\"message\": \"hello world\"}\n# @app.get(\"/header\")\n# def header_params(req: Request):\n#     headers = dict(req.headers)\n#     print(headers)\n#     return \"hello\"\n@app.get(\"/header\")\ndef header_params(user_agent: Annotated[str | None, Header()] = None):\n    print(user_agent)",
+        "detail": "header_params.main",
+        "documentation": {}
+    },
+    {
+        "label": "header_params",
+        "kind": 2,
+        "importPath": "header_params.main",
+        "description": "header_params.main",
+        "peekOfCode": "def header_params(user_agent: Annotated[str | None, Header()] = None):\n    print(user_agent)\n    return \"hello\"",
+        "detail": "header_params.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "header_params.main",
+        "description": "header_params.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\", tags=[\"Health\"])\ndef root():\n    return {\"message\": \"hello world\"}\n# @app.get(\"/header\")\n# def header_params(req: Request):\n#     headers = dict(req.headers)\n#     print(headers)\n#     return \"hello\"\n@app.get(\"/header\")",
+        "detail": "header_params.main",
         "documentation": {}
     },
     {
