@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="name" placeholder="Name" />
+      <input type="text" name="password" placeholder="password" />
+
+      <!-- <input type="file" name="file" placeholder="File" /> -->
+      <input type="submit" value="Submit" />
+    </form>
+    <script type="text/javascript">
+      const form = document.querySelector("form");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const res = await fetch("http://localhost:5000", {
+            method: "POST",
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+            body: formData,
+          });
+          console.log(res);
+        } catch (error) {
+          console.log(error);
+        }
+      });
+    </script>
+  </body>
+</html>
