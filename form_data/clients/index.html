@@ -6,14 +6,14 @@
     <title>Document</title>
   </head>
   <body>
-    <form>
+    <form action="http://localhost:5000" method="post">
       <input type="text" name="name" placeholder="Name" />
       <input type="text" name="password" placeholder="password" />
 
       <!-- <input type="file" name="file" placeholder="File" /> -->
       <input type="submit" value="Submit" />
     </form>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       const form = document.querySelector("form");
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -34,6 +34,6 @@
           console.log(error);
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>
